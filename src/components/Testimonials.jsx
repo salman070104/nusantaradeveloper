@@ -58,7 +58,7 @@ const Testimonials = () => {
         {[1, 2, 3, 4, 5].map((star) => (
           <Star
             key={star}
-            size={interactive ? 28 : 18}
+            size={interactive ? 28 : 14}
             className={`${
               star <= rating ? 'fill-yellow-400 text-yellow-400' : 'fill-slate-200 text-slate-200'
             } ${interactive ? 'cursor-pointer hover:scale-110 transition-transform' : ''}`}
@@ -105,30 +105,30 @@ const Testimonials = () => {
         </div>
 
         {/* Reviews Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-6 gap-4">
           <AnimatePresence>
             {reviews.map((review, index) => (
               <motion.div
                 key={review.id}
-                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                initial={{ opacity: 0, scale: 0.95, y: 10 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: Math.min(index * 0.1, 0.5) }}
-                className="bg-slate-50 p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col h-full hover:shadow-md transition-shadow relative overflow-hidden"
+                transition={{ duration: 0.3, delay: Math.min(index * 0.05, 0.3) }}
+                className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col h-full hover:shadow-md transition-shadow relative"
               >
-                {/* Decorative Quote Icon Background */}
-                <div className="absolute top-4 right-6 text-slate-200 opacity-50 text-8xl font-serif leading-none">"</div>
-                
-                <div className="mb-6 relative z-10">
+                <div className="flex justify-between items-start mb-4">
                   {renderStars(review.rating)}
+                  <div className="text-slate-200 opacity-60 text-5xl font-serif leading-none mt-[-10px]">"</div>
                 </div>
-                <p className="text-slate-700 mb-8 flex-1 italic relative z-10 leading-relaxed text-lg">"{review.comment}"</p>
-                <div className="flex items-center gap-4 mt-auto pt-6 border-t border-slate-200 relative z-10">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white shadow-sm shrink-0">
-                    <User size={20} />
+                
+                <p className="text-slate-600 mb-6 flex-1 text-sm leading-relaxed">"{review.comment}"</p>
+                
+                <div className="flex items-center gap-3 pt-4 border-t border-slate-100">
+                  <div className="w-10 h-10 bg-gradient-to-br from-slate-800 to-slate-900 rounded-full flex items-center justify-center text-white shadow-sm shrink-0">
+                    <User size={16} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900 leading-tight">{review.name}</h4>
-                    <p className="text-sm text-slate-500">{review.role || 'Klien BrebesWeb'}</p>
+                    <h4 className="font-bold text-slate-900 text-sm leading-tight">{review.name}</h4>
+                    <p className="text-xs text-slate-500">{review.role || 'Klien BrebesWeb'}</p>
                   </div>
                 </div>
               </motion.div>
