@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import MacbookMockup from './MacbookMockup';
 
 const Hero = () => {
   return (
@@ -106,14 +105,30 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Macbook HD Mockup */}
+          {/* HD Laptop Image (Replaced 3D/CSS Mockup) */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
             className="w-full relative z-10 flex items-center justify-center mt-12 lg:mt-0"
           >
-            <MacbookMockup />
+            <motion.img 
+              animate={{ y: [-10, 10, -10] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              src="/hero-laptop.png" 
+              alt="Laptop Mockup BrebesWeb" 
+              className="w-full max-w-[700px] h-auto drop-shadow-2xl z-10"
+              onError={(e) => {
+                e.target.onerror = null; 
+                e.target.src = "https://placehold.co/700x450/e2e8f0/64748b?text=Masukkan+Gambar+hero-laptop.png+di+folder+public";
+              }}
+            />
+            {/* Dynamic Drop shadow on floor */}
+            <motion.div 
+              animate={{ scale: [1, 0.95, 1], opacity: [0.3, 0.2, 0.3] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-black blur-2xl rounded-full z-0"
+            ></motion.div>
           </motion.div>
 
         </div>
