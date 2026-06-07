@@ -28,9 +28,15 @@ const Navbar = () => {
     }`}>
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="flex items-center justify-between">
-          <a href="#" className="text-2xl font-bold text-slate-900 tracking-tighter flex items-center gap-2">
-            <Code2 className="text-blue-600" size={32} />
-            BrebesWeb
+          <a href="#" className="text-lg md:text-xl font-black text-slate-900 tracking-tight flex items-center gap-3">
+            <img 
+              src="/LOGO ND.png" 
+              alt="Nusantara Developer Logo" 
+              className="w-10 h-10 md:w-12 md:h-12 object-contain"
+            />
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-600">
+              NUSANTARA DEVELOPER
+            </span>
           </a>
 
           {/* Desktop Nav */}
