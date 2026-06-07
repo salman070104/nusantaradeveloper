@@ -38,11 +38,11 @@ const Laptop = () => {
         <Html
           transform
           wrapperClass="htmlScreen"
-          distanceFactor={1.4}
+          distanceFactor={1.3}
           position={[0, 1.1, 0.11]}
           rotation={[0, 0, 0]}
         >
-          <div className="w-[580px] h-[380px] bg-white rounded flex flex-col overflow-hidden text-left shadow-2xl">
+          <div className="w-[500px] h-[330px] bg-white rounded-md flex flex-col overflow-hidden text-left shadow-2xl">
             {/* Browser Header */}
             <div className="h-8 bg-slate-100 border-b border-slate-200 flex items-center px-4 gap-2">
               <div className="w-3 h-3 rounded-full bg-red-400"></div>
@@ -53,26 +53,26 @@ const Laptop = () => {
               </div>
             </div>
             {/* Mini Website Content */}
-            <div className="flex-1 p-6 bg-slate-50 flex flex-col gap-4">
-              <div className="w-full h-36 bg-gradient-to-r from-blue-600 to-violet-600 rounded-xl shadow-inner flex flex-col items-center justify-center p-4">
+            <div className="flex-1 p-5 bg-slate-50 flex flex-col gap-3">
+              <div className="w-full h-32 bg-gradient-to-r from-blue-600 to-violet-600 rounded-xl shadow-inner flex flex-col items-center justify-center p-4">
                 <span className="text-white text-3xl font-extrabold tracking-tight mb-2">UMKM GO DIGITAL</span>
                 <span className="text-blue-100 text-sm">Website Modern & Responsif</span>
               </div>
-              <div className="flex gap-4">
-                <div className="w-1/3 h-28 bg-white rounded-lg shadow-sm border border-slate-100 p-3 flex flex-col gap-2">
-                  <div className="w-8 h-8 rounded bg-blue-100 mb-1"></div>
-                  <div className="w-full h-3 bg-slate-100 rounded"></div>
-                  <div className="w-2/3 h-3 bg-slate-100 rounded"></div>
+              <div className="flex gap-3">
+                <div className="w-1/3 h-24 bg-white rounded-lg shadow-sm border border-slate-100 p-3 flex flex-col gap-2">
+                  <div className="w-6 h-6 rounded bg-blue-100 mb-1"></div>
+                  <div className="w-full h-2 bg-slate-100 rounded"></div>
+                  <div className="w-2/3 h-2 bg-slate-100 rounded"></div>
                 </div>
-                <div className="w-1/3 h-28 bg-white rounded-lg shadow-sm border border-slate-100 p-3 flex flex-col gap-2">
-                  <div className="w-8 h-8 rounded bg-violet-100 mb-1"></div>
-                  <div className="w-full h-3 bg-slate-100 rounded"></div>
-                  <div className="w-3/4 h-3 bg-slate-100 rounded"></div>
+                <div className="w-1/3 h-24 bg-white rounded-lg shadow-sm border border-slate-100 p-3 flex flex-col gap-2">
+                  <div className="w-6 h-6 rounded bg-violet-100 mb-1"></div>
+                  <div className="w-full h-2 bg-slate-100 rounded"></div>
+                  <div className="w-3/4 h-2 bg-slate-100 rounded"></div>
                 </div>
-                <div className="w-1/3 h-28 bg-white rounded-lg shadow-sm border border-slate-100 p-3 flex flex-col gap-2">
-                  <div className="w-8 h-8 rounded bg-emerald-100 mb-1"></div>
-                  <div className="w-full h-3 bg-slate-100 rounded"></div>
-                  <div className="w-1/2 h-3 bg-slate-100 rounded"></div>
+                <div className="w-1/3 h-24 bg-white rounded-lg shadow-sm border border-slate-100 p-3 flex flex-col gap-2">
+                  <div className="w-6 h-6 rounded bg-emerald-100 mb-1"></div>
+                  <div className="w-full h-2 bg-slate-100 rounded"></div>
+                  <div className="w-1/2 h-2 bg-slate-100 rounded"></div>
                 </div>
               </div>
             </div>
@@ -97,7 +97,7 @@ const Hero3DModel = () => {
   return (
     <>
       <Float speed={2} rotationIntensity={0.2} floatIntensity={0.5}>
-        <group ref={groupRef} scale={1.3} rotation={[0.1, -0.4, 0]}>
+        <group ref={groupRef} scale={0.9} rotation={[0.1, -0.4, 0]}>
           <Laptop />
         </group>
       </Float>
