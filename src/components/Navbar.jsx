@@ -32,7 +32,7 @@ const Navbar = () => {
             <img 
               src="/LOGO ND.png" 
               alt="Nusantara Developer Logo" 
-              className="w-10 h-10 md:w-12 md:h-12 object-contain"
+              className="w-10 h-10 md:w-12 md:h-12 object-cover rounded-xl shadow-sm border border-slate-200"
             />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-600">
               NUSANTARA DEVELOPER
