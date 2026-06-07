@@ -1,8 +1,6 @@
 import { motion } from 'framer-motion';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
-import { ArrowRight, Sparkles } from 'lucide-react';
-import Hero3DModel from './Hero3DModel';
+import { ArrowRight } from 'lucide-react';
+import MacbookMockup from './MacbookMockup';
 
 const Hero = () => {
   return (
@@ -13,8 +11,8 @@ const Hero = () => {
       {/* Radial Gradient Mask */}
       <div className="absolute inset-0 bg-white [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,transparent_20%,black_100%)] pointer-events-none"></div>
 
-      <div className="container mx-auto px-6 max-w-6xl">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center text-center lg:text-left">
+      <div className="container mx-auto px-6 max-w-7xl relative">
+        <div className="grid lg:grid-cols-2 gap-12 items-center text-center lg:text-left">
           
           {/* Text Content */}
           <motion.div
@@ -75,7 +73,7 @@ const Hero = () => {
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
               <a 
                 href="https://wa.me/6281929442611?text=Halo%20BrebesWeb,%20saya%20tertarik%20untuk%20membuat%20website" 
                 target="_blank" 
@@ -108,17 +106,14 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* 3D Model Canvas */}
+          {/* Macbook HD Mockup */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="h-[350px] sm:h-[450px] lg:h-[600px] w-full relative z-10 mt-8 lg:mt-0"
+            transition={{ duration: 1, delay: 0.2 }}
+            className="w-full relative z-10 flex items-center justify-center mt-12 lg:mt-0"
           >
-            <Canvas camera={{ position: [0, 0, 6], fov: 45 }}>
-              <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} />
-              <Hero3DModel />
-            </Canvas>
+            <MacbookMockup />
           </motion.div>
 
         </div>
