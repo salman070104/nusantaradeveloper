@@ -117,18 +117,12 @@ const Hero = () => {
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
               src="/hero-laptop.png" 
               alt="Laptop Mockup BrebesWeb" 
-              className="w-full max-w-[700px] h-auto drop-shadow-2xl z-10"
+              className="w-full max-w-[700px] h-auto drop-shadow-2xl z-10 mix-blend-multiply"
               onError={(e) => {
                 e.target.onerror = null; 
-                e.target.src = "https://placehold.co/700x450/e2e8f0/64748b?text=Masukkan+Gambar+hero-laptop.png+di+folder+public";
+                e.target.src = "https://placehold.co/700x450/e2e8f0/64748b?text=Masukkan+Gambar+Asli+hero-laptop.png+di+folder+public";
               }}
             />
-            {/* Dynamic Drop shadow on floor */}
-            <motion.div 
-              animate={{ scale: [1, 0.95, 1], opacity: [0.3, 0.2, 0.3] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-black blur-2xl rounded-full z-0"
-            ></motion.div>
           </motion.div>
 
         </div>
