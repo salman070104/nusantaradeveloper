@@ -102,29 +102,33 @@ const Portfolio = () => {
             </div>
           </a>
 
-          {/* Website 4 — Portfolio */}
+          {/* Website 4 — Brebes Web Dev */}
           <a
-            href="https://portfolio-salmanmiftah07.vercel.app/"
+            href="https://brebes-web-dev.vercel.app/"
             target="_blank"
             rel="noreferrer"
             className="group rounded-2xl bg-white border border-slate-200 shadow-sm overflow-hidden hover:border-blue-300 hover:shadow-xl transition-all duration-300"
           >
             <div className="aspect-video w-full border-b border-slate-200 relative overflow-hidden bg-slate-50">
               <img
-                src="/portfolio-screenshot.png"
-                alt="Portfolio Developer preview"
+                src="/brebes-web-preview.png"
+                alt="Brebes Web Dev preview"
                 className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
+                onError={(e) => {
+                  e.target.onerror = null; 
+                  e.target.src = "https://placehold.co/800x450/e2e8f0/64748b?text=Masukkan+Gambar+brebes-web-preview.png+di+folder+public";
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none" />
             </div>
             <div className="p-5 space-y-3">
               <div className="flex flex-wrap gap-2">
-                <span className="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600">Portfolio</span>
-                <span className="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded-full bg-slate-50 border border-slate-200 text-slate-600">Next.js</span>
+                <span className="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600">Web Agency</span>
+                <span className="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded-full bg-slate-50 border border-slate-200 text-slate-600">React + Vite</span>
               </div>
-              <h3 className="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">Portfolio Developer</h3>
-              <p className="text-slate-600 text-sm font-light leading-relaxed">Website portfolio interaktif dengan fitur 3D, animasi modern, dan desain dark mode premium.</p>
+              <h3 className="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">Brebes Web Dev</h3>
+              <p className="text-slate-600 text-sm font-light leading-relaxed">Website landing page penyedia jasa pembuatan website premium, responsif, dan elegan di Brebes.</p>
               <div className="inline-flex items-center gap-1.5 text-xs text-blue-600 font-semibold mt-1">
                 <ExternalLink className="w-3.5 h-3.5" /> Lihat Website
               </div>
