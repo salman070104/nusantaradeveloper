@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, User, MessageSquarePlus, X } from 'lucide-react';
 
@@ -30,7 +30,18 @@ const initialReviews = [
 ];
 
 const Testimonials = () => {
-  const [reviews, setReviews] = useState(initialReviews);
+  const [reviews, setReviews] = useState(() => {
+    const savedReviews = localStorage.getItem('brebesWebReviews');
+    if (savedReviews) {
+      return JSON.parse(savedReviews);
+    }
+    return initialReviews;
+  });
+
+  useEffect(() => {
+    localStorage.setItem('brebesWebReviews', JSON.stringify(reviews));
+  }, [reviews]);
+
   const [showForm, setShowForm] = useState(false);
   const [newReview, setNewReview] = useState({ name: '', role: '', rating: 5, comment: '' });
 
