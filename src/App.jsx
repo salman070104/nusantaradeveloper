@@ -2,6 +2,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
+import Testimonials from './components/Testimonials';
 import WhyChooseUs from './components/WhyChooseUs';
 import Footer from './components/Footer';
 
@@ -12,6 +13,7 @@ function App() {
       <Hero />
       <Services />
       <Portfolio />
+      <Testimonials />
       <WhyChooseUs />
       <Footer />
     </main>
