@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <footer className="bg-slate-50 border-t border-slate-200 pt-20 pb-10">
       <div className="container mx-auto px-6 max-w-6xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          <div className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-16">
+          <div className="space-y-6 lg:col-span-4">
             <a href="#" className="text-2xl font-bold text-slate-900 tracking-tighter flex items-center gap-2">
               <Code2 className="text-blue-600" size={32} />
               BrebesWeb
@@ -26,7 +26,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div>
+          <div className="lg:col-span-2">
             <h3 className="text-slate-900 font-bold mb-6">Layanan</h3>
             <ul className="space-y-4">
               <li><a href="#" className="text-slate-600 hover:text-blue-600 transition-colors">Company Profile</a></li>
@@ -37,7 +37,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          <div className="lg:col-span-2">
             <h3 className="text-slate-900 font-bold mb-6">Informasi</h3>
             <ul className="space-y-4">
               <li><a href="#portfolio" className="text-slate-600 hover:text-blue-600 transition-colors">Portfolio</a></li>
@@ -47,7 +47,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          <div className="lg:col-span-2">
             <h3 className="text-slate-900 font-bold mb-6">Kontak</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
@@ -66,31 +66,33 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-        </div>
 
-        {/* Map Section */}
-        <div className="mb-12 rounded-2xl overflow-hidden shadow-sm border border-slate-200 bg-white h-64 md:h-80 relative group">
-          <iframe 
-            src="https://maps.google.com/maps?q=-6.913242,108.832078&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-            width="100%" 
-            height="100%" 
-            style={{ border: 0 }} 
-            allowFullScreen="" 
-            loading="lazy" 
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Lokasi BrebesWeb"
-            className="absolute inset-0 w-full h-full grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
-          ></iframe>
-          <div className="absolute top-4 right-4 z-10">
-            <a 
-              href="https://maps.app.goo.gl/jywuJXvhUzCwjFdDA" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="flex items-center gap-2 bg-white/90 backdrop-blur-sm text-slate-900 px-4 py-2 rounded-full shadow-lg hover:bg-blue-600 hover:text-white transition-all font-medium text-sm border border-slate-100"
-            >
-              <MapPin size={16} />
-              Buka di Maps
-            </a>
+          <div className="col-span-1 md:col-span-2 lg:col-span-2">
+            <h3 className="text-slate-900 font-bold mb-6">Lokasi Kami</h3>
+            <div className="rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-white h-48 relative group">
+              <iframe 
+                src="https://maps.google.com/maps?q=-6.913242,108.832078&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen="" 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Lokasi BrebesWeb"
+                className="absolute inset-0 w-full h-full grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
+              ></iframe>
+              <a 
+                href="https://maps.app.goo.gl/jywuJXvhUzCwjFdDA" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="absolute inset-0 z-10 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <span className="bg-white text-slate-900 px-4 py-2 rounded-full shadow-lg font-medium text-sm flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                  <MapPin size={16} className="text-blue-600" />
+                  Buka Maps
+                </span>
+              </a>
+            </div>
           </div>
         </div>
 
