@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <footer className="bg-slate-50 border-t border-slate-200 pt-20 pb-10">
       <div className="container mx-auto px-6 max-w-6xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-16">
-          <div className="space-y-6 lg:col-span-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-16">
+          <div className="space-y-6">
             <a href="#" className="text-2xl font-bold text-slate-900 tracking-tighter flex items-center gap-2">
               <Code2 className="text-blue-600" size={32} />
               BrebesWeb
@@ -26,7 +26,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-2">
+          <div>
             <h3 className="text-slate-900 font-bold mb-6">Layanan</h3>
             <ul className="space-y-4">
               <li><a href="#" className="text-slate-600 hover:text-blue-600 transition-colors">Company Profile</a></li>
@@ -37,7 +37,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="lg:col-span-2">
+          <div>
             <h3 className="text-slate-900 font-bold mb-6">Informasi</h3>
             <ul className="space-y-4">
               <li><a href="#portfolio" className="text-slate-600 hover:text-blue-600 transition-colors">Portfolio</a></li>
@@ -47,9 +47,9 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="lg:col-span-2">
+          <div>
             <h3 className="text-slate-900 font-bold mb-6">Kontak</h3>
-            <ul className="space-y-4">
+            <ul className="space-y-4 mb-6">
               <li className="flex items-start gap-3">
                 <MapPin className="text-blue-600 mt-1 shrink-0" size={20} />
                 <a href="https://maps.app.goo.gl/jywuJXvhUzCwjFdDA" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-blue-600 transition-colors leading-relaxed">
@@ -62,14 +62,11 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="text-blue-600 shrink-0" size={20} />
-                <span className="text-slate-600">salmanmiftah07@gmail.com</span>
+                <span className="text-slate-600 truncate">salmanmiftah07@gmail.com</span>
               </li>
             </ul>
-          </div>
 
-          <div className="col-span-1 md:col-span-2 lg:col-span-2">
-            <h3 className="text-slate-900 font-bold mb-6">Lokasi Kami</h3>
-            <div className="rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-white h-48 relative group">
+            <div className="rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-white h-32 relative group">
               <iframe 
                 src="https://maps.google.com/maps?q=-6.913242,108.832078&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                 width="100%" 
