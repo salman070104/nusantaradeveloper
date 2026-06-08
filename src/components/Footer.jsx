@@ -52,7 +52,9 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="text-blue-600 mt-1 shrink-0" size={20} />
-                <span className="text-slate-600 leading-relaxed">Desa Mundu, Kec. Tanjung, Kab. Brebes</span>
+                <a href="https://maps.app.goo.gl/jywuJXvhUzCwjFdDA" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-blue-600 transition-colors leading-relaxed">
+                  Desa Mundu, Kec. Tanjung, Kab. Brebes
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="text-blue-600 shrink-0" size={20} />
@@ -63,6 +65,32 @@ const Footer = () => {
                 <span className="text-slate-600">salmanmiftah07@gmail.com</span>
               </li>
             </ul>
+          </div>
+        </div>
+
+        {/* Map Section */}
+        <div className="mb-12 rounded-2xl overflow-hidden shadow-sm border border-slate-200 bg-white h-64 md:h-80 relative group">
+          <iframe 
+            src="https://maps.google.com/maps?q=-6.913242,108.832078&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }} 
+            allowFullScreen="" 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Lokasi BrebesWeb"
+            className="absolute inset-0 w-full h-full grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
+          ></iframe>
+          <div className="absolute top-4 right-4 z-10">
+            <a 
+              href="https://maps.app.goo.gl/jywuJXvhUzCwjFdDA" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center gap-2 bg-white/90 backdrop-blur-sm text-slate-900 px-4 py-2 rounded-full shadow-lg hover:bg-blue-600 hover:text-white transition-all font-medium text-sm border border-slate-100"
+            >
+              <MapPin size={16} />
+              Buka di Maps
+            </a>
           </div>
         </div>
 
