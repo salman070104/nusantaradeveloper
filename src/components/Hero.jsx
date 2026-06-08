@@ -24,15 +24,15 @@ const Hero = () => {
               🚀 Solusi Digital Terbaik Brebes
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight mb-6 tracking-tight">
-              Tingkatkan Skala <br className="hidden md:block" />
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6 tracking-tight">
+              Jasa Pembuatan <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600">
-                Bisnis Anda
+                Website Brebes
               </span>
             </h1>
             
             <p className="text-slate-600 text-lg md:text-xl mb-10 max-w-xl leading-relaxed">
-              Kami membantu UMKM dan perusahaan di Brebes dan sekitarnya untuk go digital dengan website modern, responsif, dan elegan.
+              Mencari jasa pembuatan website <strong>terdekat di Brebes</strong>? Kami siap membantu UMKM dan perusahaan Anda <em>go digital</em> dengan website modern, profesional, dan mudah ditemukan di Google.
             </p>
             
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
