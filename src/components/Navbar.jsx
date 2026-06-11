@@ -63,7 +63,7 @@ const Navbar = () => {
                     className="flex flex-col px-4 py-2 hover:bg-slate-50 transition-colors"
                   >
                     <span className="text-sm font-medium text-slate-800">Admin 1</span>
-                    <span className="text-xs text-slate-500">0819-2944-2611</span>
+                    <span className="text-xs text-slate-500">081929442611</span>
                   </a>
                   <a
                     href="https://wa.me/6287816548545"
@@ -72,7 +72,7 @@ const Navbar = () => {
                     className="flex flex-col px-4 py-2 hover:bg-slate-50 transition-colors"
                   >
                     <span className="text-sm font-medium text-slate-800">Admin 2</span>
-                    <span className="text-xs text-slate-500">+62 878-1654-8545</span>
+                    <span className="text-xs text-slate-500">087816548545</span>
                   </a>
                 </div>
               </li>
@@ -121,7 +121,7 @@ const Navbar = () => {
                   rel="noopener noreferrer"
                   className="block text-slate-600 hover:text-blue-600 transition-colors text-sm pl-2"
                 >
-                  Admin 1 (0819-2944-2611)
+                  Admin 1 (081929442611)
                 </a>
                 <a
                   href="https://wa.me/6287816548545"
@@ -129,7 +129,7 @@ const Navbar = () => {
                   rel="noopener noreferrer"
                   className="block text-slate-600 hover:text-blue-600 transition-colors text-sm pl-2"
                 >
-                  Admin 2 (+62 878-1654-8545)
+                  Admin 2 (087816548545)
                 </a>
               </li>
               <li>
