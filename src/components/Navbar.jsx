@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X, Code2 } from 'lucide-react';
+import { Menu, X, Code2, ChevronDown } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,7 +19,6 @@ const Navbar = () => {
     { name: 'Layanan', href: '#services' },
     { name: 'Portofolio', href: '#portfolio' },
     { name: 'Keunggulan', href: '#why-us' },
-    { name: 'Kontak', href: '#contact' },
   ];
 
   return (
@@ -52,6 +51,31 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
+              <li className="relative group">
+                <button className="flex items-center gap-1 text-slate-600 hover:text-blue-600 font-medium transition-colors text-sm">
+                  Kontak <ChevronDown size={16} />
+                </button>
+                <div className="absolute top-full right-0 mt-4 w-56 bg-white border border-slate-200 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2">
+                  <a
+                    href="https://wa.me/6281929442611"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col px-4 py-2 hover:bg-slate-50 transition-colors"
+                  >
+                    <span className="text-sm font-medium text-slate-800">Admin 1</span>
+                    <span className="text-xs text-slate-500">0819-2944-2611</span>
+                  </a>
+                  <a
+                    href="https://wa.me/6287816548545"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col px-4 py-2 hover:bg-slate-50 transition-colors"
+                  >
+                    <span className="text-sm font-medium text-slate-800">Admin 2</span>
+                    <span className="text-xs text-slate-500">+62 878-1654-8545</span>
+                  </a>
+                </div>
+              </li>
             </ul>
             <a
               href="https://wa.me/6281929442611?text=Halo%20BrebesWeb,%20saya%20mau%20konsultasi%20pembuatan%20website"
@@ -87,6 +111,27 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
+              
+              {/* Mobile Contact Menu */}
+              <li className="flex flex-col gap-2 pt-2 border-t border-slate-100">
+                <span className="text-sm font-semibold text-slate-800">Kontak:</span>
+                <a
+                  href="https://wa.me/6281929442611"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-slate-600 hover:text-blue-600 transition-colors text-sm pl-2"
+                >
+                  Admin 1 (0819-2944-2611)
+                </a>
+                <a
+                  href="https://wa.me/6287816548545"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-slate-600 hover:text-blue-600 transition-colors text-sm pl-2"
+                >
+                  Admin 2 (+62 878-1654-8545)
+                </a>
+              </li>
               <li>
                 <a
                   href="https://wa.me/6281929442611?text=Halo%20BrebesWeb,%20saya%20mau%20konsultasi%20pembuatan%20website"
