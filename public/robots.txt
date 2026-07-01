@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://brebes-web-dev.vercel.app/sitemap.xml
+Sitemap: https://nusantaradeveloper.starconnecttanjung.com/sitemap.xml
